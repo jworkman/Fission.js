@@ -44,6 +44,23 @@ var Fission = {
 
 Fission.Utils = {
 
+    subArrayFromStart: function (subtract, from)
+    {
+
+
+        var returnArray = [];
+        for(var i = 0, j = from.length; i < j; i++) {
+
+            if( typeof(subtract[i]) === "undefined" ) { returnArray.push( from[i] ); continue; }
+            if( from[i] != subtract[i] ) { returnArray.push( from[i] ); }
+
+        }
+
+        return returnArray;
+
+
+    },
+
 
     trimArray: function( arr ) {
 

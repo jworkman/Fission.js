@@ -73,8 +73,9 @@ Fission.Classes.Route = function( httpVerb ) {
 
         if( this.scope.length > 1 ) {
 
-            uriSegments = this.subScope( uriSegments );
-            if( uriSegments === false ) { return false; }
+            /*uriSegments = this.subScope( uriSegments );
+            if( uriSegments === false ) { return false; }*/
+            uriSegments = Fission.Utils.subArrayFromStart( this.scope.split("/"), uriSegments );
 
         }
 
